@@ -10,4 +10,6 @@
          )
 )
 
-(DEFINE (sum-up-numbers-simple L))
+(DEFINE (sum-up-numbers-simple L)
+        (cond ((null? L) '0)) ;If the list is empty return a "0"
+)
