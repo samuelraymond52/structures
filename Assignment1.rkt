@@ -35,9 +35,11 @@
 
 
 (DEFINE (min-above-min L1 L2)
-        (cond((null? L2) #f) ;if the second list L2 is empty return false
+        (>(cond((null? L2) #f) ;if the second list L2 is empty return false
+               ((<(car L2)(car(cdr L2))(min-above-min(
+             
 
-             )
+             )())
 
 
 )
