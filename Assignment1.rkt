@@ -12,10 +12,14 @@
 
 (DEFINE (sum-up-numbers-simple L)
         (cond ((null? L) 0) ;If the list is empty return a "0"
-              (not(number? (cdr L))0)(sum-up-numbers-simple (CAR L)); checks if the atom is a number if its not it returns zero and continues, if it is a number the function continues to the adding line.
-              (else
-               (+ (CAR L) (sum-up-numbers-simple (CDR L))))
-              )
+              ((list? (car L))0)
+              ((number? (cdr L))(+ (car L)(sum-up-numbers-simple(cdr L)))); checks if the atom is a number if its not it returns zero and continues, if it is a number the function continues to the adding line.
+              (else (sum-up-numbers-simple(cdr L)))
+               ;(+ append( sum-up-numbers-simple (CAR L))(List(sum-up-numbers-simple(CDR L))))
+
+                ;(+(sum-up-numbers-simple(CAR L)) (sum-up-numbers-simple (CDR L)))
+                ;(+ (CAR L) (sum-up-numbers-simple (CDR L)))
               
-)
-        
+                )
+              )
+
