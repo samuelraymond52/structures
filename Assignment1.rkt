@@ -24,3 +24,13 @@
          )
  )
 
+(DEFINE (sum-up-numbers-general L)
+        (cond ((null? L) 0) ;If the list is empty return a "0"
+              ((list? (car L)) (+ (sum-up-numbers-general(cdr L))) (sum-up-numbers-general(cdr L))) ;If the next atom is a list remove it and call the function again
+              ((number? (car L))(+ (car L)(sum-up-numbers-general(cdr L))));If the atom is a number then take that value and add it to the scope of the addition function then CDR and find more numbers to add.  
+              (else (sum-up-numbers-general(cdr L))) ;if None of the conditions above are met pop off the current atom
+              
+         )
+ )
+        
+
