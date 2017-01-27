@@ -35,13 +35,11 @@
 
 
 (DEFINE (min-above-min L1 L2)
-        (>(cond((null? L2) #f) ;if the second list L2 is empty return false
-               ((<(car L2)(car(cdr L2))(min-above-min(cons(car L2(cdr(cdr L2)))))))               
-               (else (fun
-               ))
+        (cond((null? L2) #f) ;if the second list L2 is empty return false
+               ((<= (car L2) (car (cdr L2)))(Test (cons (car L2) (cdr(cdr L2))))) ;Compares the first and second atom in the list and if the second is geater than the first remove it frm the lista nd compare to the second 
+               (else (Test (cdr L2)));if all the conditions above arent met by the current atom remove it from the list and call the function to check next atom.
 
-
-)
+         )
           ))
 
 
