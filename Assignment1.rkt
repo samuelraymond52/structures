@@ -11,16 +11,9 @@
 )
 
 (DEFINE (sum-up-numbers-simple L)
-        (cond ((null? L) '0) ;If the list is empty return a "0"
-              ((list? L)
-               (+(append(sum-up-numbers-simple (cdr L))))
-               )
-              (else L)
+        (cond ((null? L) 0) ;If the list is empty return a "0"
+              (not(number? (cdr L))0)(sum-up-numbers-simple (CAR L)))
+              (else
+               (+ (car list) (sum-list (cdr list))))
 )
-        )
-
-(DEFINE (adder L)
-        ( if L
-        ('+ (car L)(adder (cdr L)))
         
-        0))
