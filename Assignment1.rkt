@@ -46,7 +46,11 @@
 
 (DEFINE (Test L2)
         (cond((null? L2) #f) ;if the second list L2 is empty return false
-               ((<(car L2)(car(cdr L2))(Test(cons(car L2(cdr(cdr L2)))))))
-               (else (Test (cdr L2)))))
+               ((<(car L2)(car(cdr L2))))(Test(cons(car L2(cdr(cdr L2))))) 
+               (else (Test (cdr L2)))
+
+         )
+        
+)
          
 
